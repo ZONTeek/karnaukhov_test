@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/karnaukhov_test/static/css/main.ec40f621.css",
+    "main.js": "/karnaukhov_test/static/js/main.c9b0a11c.js",
+    "static/js/787.85ea1246.chunk.js": "/karnaukhov_test/static/js/787.85ea1246.chunk.js",
+    "index.html": "/karnaukhov_test/index.html",
+    "main.ec40f621.css.map": "/karnaukhov_test/static/css/main.ec40f621.css.map",
+    "main.c9b0a11c.js.map": "/karnaukhov_test/static/js/main.c9b0a11c.js.map",
+    "787.85ea1246.chunk.js.map": "/karnaukhov_test/static/js/787.85ea1246.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec40f621.css",
+    "static/js/main.c9b0a11c.js"
+  ]
+}
