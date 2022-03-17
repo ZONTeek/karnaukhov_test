@@ -1,0 +1,48 @@
+.order-list-wrapper {
+  flex: 1;
+  padding: 2rem;
+  max-height: 800px;
+  height: 83%;
+  width: 100%;
+  min-width: 800px;
+}
+
+.ordercard {
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  background-color: rgb(203, 230, 252);
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px black;
+}
+
+.ordercard-selected {
+  background-color: rgb(112, 144, 231);
+}
+
+.order-list-wrapper ul {
+  list-style: none;
+}
+
+.ordercard-description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ordercard-notes {
+  padding-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.highlight {
+  background: rgb(224, 224, 224);
+}
+
+.ant-table-wrapper {
+  height: 100%;
+  overflow-x: auto;
+  background-color: #fff;
+}
+.ant-pagination.ant-table-pagination.ant-table-pagination-right {
+  margin-right: 10px;
+}

@@ -1,0 +1,26 @@
+.map-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative;
+}
+
+.leaflet {
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.wrapper {
+  padding: 5%;
+}
+.leaflet-routing-container.leaflet-bar.leaflet-control {
+  height: 250px;
+  padding: 10px;
+  background-color: #fff;
+  overflow-y: scroll;
+}

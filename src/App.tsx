@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import SplitterLayout from 'react-splitter-layout';
+import { MapContainer } from './components/map/MapContainer';
+import { OrderList } from './components/OrderList/OrderList';
+import { EditForm } from './components/EditForm/EditForm';
+import { clearCurrentOrder, setCurrentOrder } from './store/OrderSlice';
 
-function App() {
+import './App.css';
+import 'react-splitter-layout/lib/index.css'
+import { Order } from './types/types';
+
+
+const App = () => {
+  const [editFormOpen, setEditFormOpen] = useState(false);
+  
+  const dispatch = useDispatch()
+
+  const openEditForm = (type: string, order?: Order): void => {
+    if (type==='edit') {
+      dispatch(setCurrentOrder(order!));
+    } else {
+      dispatch(clearCurrentOrder());
+    }
+    setEditFormOpen(true)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className='App'>
+        <SplitterLayout customClassName='splitter' vertical={false} percentage primaryIndex={1} primaryMinSize={40} secondaryMinSize={40}>
+          <OrderList openEditForm={openEditForm} />
+          <MapContainer />
+        </SplitterLayout>
+        {editFormOpen && <EditForm toggleEditForm={setEditFormOpen} />}
+      </div>
   );
 }
 
